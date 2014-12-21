@@ -1,0 +1,12 @@
+﻿<sap:ActivityDesigner x:Class="EmguWF.Activities.Designers.ImageLoaderDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+   xmlns:converters="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+     Icon="{StaticResource DefaultIcon}">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="File" />
+            <TextBox Margin="5" Text="{Binding ModelItem.File, Mode=TwoWay }" Width="300" />
+            <Button Content="..." Padding="5,2" Margin="5" DockPanel.Dock="Right" Click="ShowFileDialog" />
+        </StackPanel>
+</sap:ActivityDesigner>

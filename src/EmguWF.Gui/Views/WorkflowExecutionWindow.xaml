@@ -1,0 +1,32 @@
+﻿<Window x:Class="EmguWF.Views.WorkflowExecutionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:interactivity="http://www.julmar.com/wpfhelpers"
+        Title="{Binding Title}" Height="300" Width="800" WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Top">
+            <Slider Minimum="9" Maximum="48" x:Name="theSlider" Width="100" Value="14" VerticalAlignment="Center"
+                    TickPlacement="BottomRight" TickFrequency="10" ToolTip="{Binding RelativeSource={RelativeSource Self}, Path=Value, StringFormat=D2}" />
+
+            <StatusBarItem HorizontalAlignment="Right" DockPanel.Dock="Right">
+                <Button ToolTip="Copy Output to Clipboard" Command="{Binding CopyToClipboard}" Padding="5,2">
+                    <Image Source="/Images/copy16x16.png" Width="12" Height="12"></Image>
+                </Button>
+            </StatusBarItem>
+
+            <StatusBarItem HorizontalAlignment="Right" DockPanel.Dock="Right">
+                <Button ToolTip="Cancel Run" 
+                        Command="{Binding Cancel}" Padding="5,2">
+                    <Image Source="/Images/stop16x16.png" Width="12" Height="12">
+                        <i:Interaction.Behaviors>
+                            <interactivity:AutoDisabledImageBehavior />
+                        </i:Interaction.Behaviors>
+                    </Image>
+                </Button>
+            </StatusBarItem>
+        </StatusBar>
+        <TextBox FontFamily="Courier New" IsReadOnly="True" SourceUpdated="OnLogTextChanged"
+            Text="{Binding ReadOnlyLogText, Mode=OneWay, NotifyOnSourceUpdated=True}" FontSize="{Binding ElementName=theSlider, Path=Value}" />
+    </DockPanel>
+</Window>

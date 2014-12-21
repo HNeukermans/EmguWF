@@ -1,0 +1,10 @@
+﻿<sap:ActivityDesigner x:Class="EmguWF.Activities.Designers.GrayErodeDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+     Icon="{StaticResource DefaultIcon}">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="# Iterations" />
+            <TextBox Margin="5" Text="{Binding ModelItem.Iterations, Mode=TwoWay }" Width="128" />
+        </StackPanel>
+</sap:ActivityDesigner>

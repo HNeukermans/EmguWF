@@ -1,0 +1,16 @@
+﻿<sap:ActivityDesigner x:Class="EmguWF.Activities.Designers.GrayBinaryThresholdDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+     Icon="{StaticResource DefaultIcon}">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Threshold" />
+            <TextBox Margin="5" Text="{Binding ModelItem.Threshold, Mode=TwoWay }" Width="128" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="MaxValue" />
+            <TextBox Margin="5" Text="{Binding ModelItem.MaxValue, Mode=TwoWay }" Width="128" />
+        </StackPanel>
+    </StackPanel>
+</sap:ActivityDesigner>
