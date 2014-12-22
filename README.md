@@ -26,3 +26,9 @@ Add all opencv_dlls to the OpenCV folder.
 Add all EMGU.CV.xxx.dlls as references to both EmguWF.Gui & EmguWF.Actvitities projects.
 + If this is all setup, you should now be able to compile and run emguWF. :-)
 
+![emguwf2](https://cloud.githubusercontent.com/assets/2285199/5526368/e0a655de-89f2-11e4-84c7-a0e46425373f.JPG)  
+
+![emguwf4](https://cloud.githubusercontent.com/assets/2285199/5526369/e4fc1754-89f2-11e4-8f83-bbd1ee3ccb1f.JPG)  
+
+![emguwf3](https://cloud.githubusercontent.com/assets/2285199/5526371/e88669a6-89f2-11e4-8e1a-45d0b4e45a0f.JPG)
+
