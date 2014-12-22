@@ -20,8 +20,8 @@ How to install
 + Download and install a version of Emgu CV from sourceforge. I use version 2.9.0.1922-beta. [emgucv-windows-universal-cuda 2.9.0.1922](http://sourceforge.net/projects/emgucv/).
 + Go to the bin folder. In my case this is xxx/emgucv-windows-universal-cuda 2.9.0.1922/bin. The bin folder contains all EMGU.CV.xxx.dlls you will need for EmguWF to compile.     
 Also inside the bin folder, you will find two subfolders: x86 or x64. Both folders, contain the opencv dlls that EMGU CV uses. If you are targetting a 64 bit environment, you must rely on the x64 folder, and forget about the x86. The inverse is true, if you are running on a 32 bit platform. 
-+ Get of clone of EmguWF. Open it in Visual studio 2012.   
++ Get of clone of EmguWF and open it in Visual Studio 2012.   
 Add all opencv_dlls to the OpenCV folder.   
 Add all EMGU.CV.xxx.dlls as references to both EmguWF.Gui & EmguWF.Actvitities projects.
-+ If this is all setup, you should now be able to compile and run emguWF.
++ If this is all setup, you should now be able to compile and run emguWF. :-)
 
