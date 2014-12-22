@@ -3,8 +3,6 @@ EmguWF
 
 EmguWF is an image processing pipeline designer.
 
-EmguWF uses the EMGU CV image processing library.  
-
 EmguWF provides you with a designer surface, that allows you to, very easily, create custom image processing workflows. In EmguWF, a workflow is created, by simply dragging and dropping pipeline activitities unto the desinger surface. 
 With EmguWF, you can create any sequence of activitities, out of a set of predefined elements. If the predefined activities do not fit your needs, you can create your own.
 
