@@ -12,7 +12,7 @@ Also, EmguWF allows the user to load or save existing workflows from your local 
 
 After the user has setup his custom routine, he can run it against an image, by pressing the 'Run Workflow' button. 
 
-Following screenshot, show the EmguWF desinger.  
+Following screenshot, show the EmguWF designer.  
 
 ![emguwf1](https://cloud.githubusercontent.com/assets/2285199/5525326/8aadd656-89e4-11e4-9a7a-f5b65479291f.JPG)
 
