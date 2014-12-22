@@ -17,4 +17,4 @@ Following screenshot, show the EmguWF desinger.
 
 How to install
 --------------
-+ Download and install a version of Emgu CV. I use version 2.9.0. [emgucv-windows-universal-cuda 2.9.0.1922](http://sourceforge.net/projects/emgucv/files/emgucv/2.4.2/). Following is a link to the official [wiki page](http://www.emgu.com/wiki/index.php/Main_Page). 
++ Download and install a version of Emgu CV from sourceforge. I use version 2.9.0.1922-beta. [emgucv-windows-universal-cuda 2.9.0.1922](http://sourceforge.net/projects/emgucv/).
