@@ -23,6 +23,7 @@ Also inside the bin folder, you will find two subfolders: x86 or x64. Both folde
 Add all opencv_dlls to the OpenCV folder.   
 Add all EMGU.CV.xxx.dlls as references to both EmguWF.Gui & EmguWF.Actvitities projects.
 + Make sure in the project properties, under 'tab build events', that you have the xcopy statement : 'xcopy /Y "$(ProjectDir)OpenCV\*.dll" "$(TargetDir)x64\"' as post build event. This copies all the opencv dlls to the output/x64 directory. Change it to x86 if you are running against an 32 bits platform.
++ In visual studio, open the BUILD menu, and click 'Configuration Manager'. Open the 'Active solution platform' dropdown, and select <new>. In the popup that appears, select the x64 platform, press OK to close.   
 + If this is all setup, you should now be able to compile and run emguWF. :-)
 
 ![emguwf2](https://cloud.githubusercontent.com/assets/2285199/5526368/e0a655de-89f2-11e4-84c7-a0e46425373f.JPG) |
