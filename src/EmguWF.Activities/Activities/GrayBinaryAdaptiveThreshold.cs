@@ -1,12 +1,15 @@
 ﻿using System.Activities;
 using System.ComponentModel;
 using Emgu.CV;
+using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
+using EmguWF.Activities.Designers;
 using EmguWF.Activities.Extensions.Contracts;
 
 namespace EmguWF.Activities.Activities
 {
-    public class GrayBinaryThreshold : CodeActivity
+    [Designer(typeof (GrayBinaryAdaptiveThresholdDesigner))]
+    public class GrayBinaryAdaptiveThreshold : CodeActivity
     {
         [Description("Image")]
         [RequiredArgument]
@@ -21,10 +24,15 @@ namespace EmguWF.Activities.Activities
         [DefaultValue(255)]
         public int MaxValue { get; set; }
 
+        [RequiredArgument]
+        [Description("The size of the adaptivity filter (3,5,7,...).")]
+        [DefaultValue(5)]
+        public int BlockSize { get; set; }
+
         /// <summary>
         /// Constructor
         /// </summary>
-        public GrayBinaryThreshold()
+        public GrayBinaryAdaptiveThreshold()
         {
 
         }
@@ -32,7 +40,8 @@ namespace EmguWF.Activities.Activities
         protected override void Execute(CodeActivityContext context)
         {
             var image = Image.Get(context);
-            image = image.ThresholdBinary(new Gray(Threshold),new Gray(MaxValue));
+            image = image.ThresholdAdaptive(new Gray(MaxValue), ADAPTIVE_THRESHOLD_TYPE.CV_ADAPTIVE_THRESH_GAUSSIAN_C,
+                                            THRESH.CV_THRESH_BINARY, BlockSize, new Gray(0) /*constant subtracted for mean or weighed mean*/);
             context.GetExtension<IImageStore>().Store(image);
             Image.Set(context, image);
         }

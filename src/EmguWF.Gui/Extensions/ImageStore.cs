@@ -7,6 +7,7 @@ using Emgu.CV;
 using Emgu.CV.Structure;
 using EmguWF.Activities;
 using EmguWF.Activities.Extensions;
+using EmguWF.Activities.Extensions.Contracts;
 
 namespace EmguWF.ViewModels
 {

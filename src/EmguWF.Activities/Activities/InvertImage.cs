@@ -2,6 +2,7 @@ using System.Activities;
 using System.ComponentModel;
 using Emgu.CV;
 using EmguWF.Activities.Extensions;
+using EmguWF.Activities.Extensions.Contracts;
 
 namespace EmguWF.Activities
 {

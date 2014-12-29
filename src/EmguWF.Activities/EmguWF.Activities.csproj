@@ -49,34 +49,34 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Emgu.CV">
-      <HintPath>..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.CV.DebuggerVisualizers.VS2012">
-      <HintPath>..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.DebuggerVisualizers.VS2012.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.DebuggerVisualizers.VS2012.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.CV.GPU">
-      <HintPath>..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.GPU.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.GPU.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.CV.ML">
-      <HintPath>..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.ML.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.ML.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.CV.OCR">
-      <HintPath>..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.OCR.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.OCR.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.CV.OpenCL">
-      <HintPath>..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.OpenCL.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.OpenCL.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.CV.Stitching">
-      <HintPath>..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.Stitching.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.Stitching.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.CV.UI">
-      <HintPath>..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.UI.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.UI.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.CV.VideoStab">
-      <HintPath>..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.VideoStab.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.CV.VideoStab.dll</HintPath>
     </Reference>
     <Reference Include="Emgu.Util">
-      <HintPath>..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.Util.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\emgucv-windows-universal-cuda 2.9.0.1922\bin\Emgu.Util.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\BgrGrayConvertor.cs" />
+    <Compile Include="Activities\GrayBinaryAdaptiveThreshold.cs" />
     <Compile Include="Activities\InvertImage.cs" />
     <Compile Include="Activities\ShowImage.cs" />
     <Compile Include="Activities\GrayBinaryThreshold.cs" />
@@ -105,6 +106,9 @@
     <Compile Include="Activities\ShowGrayImage.cs" />
     <Compile Include="Designers\BgrErodeDesigner.xaml.cs">
       <DependentUpon>BgrErodeDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Designers\GrayBinaryAdaptiveThresholdDesigner.xaml.cs">
+      <DependentUpon>GrayBinaryAdaptiveThresholdDesigner.xaml</DependentUpon>
     </Compile>
     <Compile Include="Designers\GrayBinaryThresholdDesigner.xaml.cs">
       <DependentUpon>GrayBinaryThresholdDesigner.xaml</DependentUpon>
@@ -121,7 +125,7 @@
     </Compile>
     <Compile Include="Activities\BgrErode.cs" />
     <Compile Include="Activities\ImageLoader.cs" />
-    <Compile Include="Extensions\IImageStore.cs" />
+    <Compile Include="Extensions.Contracts\IImageStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterMetadata.cs" />
     <Compile Include="Activities\ShowBgrImage.cs" />
@@ -129,6 +133,10 @@
   <ItemGroup />
   <ItemGroup>
     <Page Include="Designers\BgrErodeDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Designers\GrayBinaryAdaptiveThresholdDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

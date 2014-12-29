@@ -1,6 +1,6 @@
 ﻿using Emgu.CV;
 
-namespace EmguWF.Activities.Extensions
+namespace EmguWF.Activities.Extensions.Contracts
 {
     public interface IImageStore
     {
