@@ -16,6 +16,7 @@ Following screenshot, show the EmguWF designer.
 
 [How to install](https://github.com/Gittermans/EmguWF/wiki/How-to-install)
 ================
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Gittermans/emguwf/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 
 
